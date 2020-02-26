@@ -244,6 +244,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # F2FS
 PRODUCT_PACKAGES += \
     sg_write_buffer \
