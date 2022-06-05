@@ -975,3 +975,12 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
 
 #hax for safnet
 import /vendor/etc/init/hw/init.safailnet.rc
+
+on property:init.svc.cnss_diag=running
+    stop cnss_diag
+
+on property:init.svc.tcpdump=running
+    stop tcpdump
+
+on property:init.svc.vendor.ipacm-diag=running
+    stop vendor.ipacm-diag
