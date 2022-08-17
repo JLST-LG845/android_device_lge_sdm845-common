@@ -40,7 +40,7 @@ persist.debug.coresight.config=stm-events
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
-#Netflix custom property
+# Netflix custom property
 ro.netflix.bsp_rev=Q845-05000-1
 
 # NFC
@@ -95,11 +95,6 @@ ro.surface_flinger.use_color_management=true
 # Voice assistant
 ro.opa.eligible_device=true
 
-# Iorap
-ro.iorapd.enable=true
-iorapd.perfetto.enable=true
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-
 # Wifi
 config.disable_rtt=true
 
@@ -124,7 +119,7 @@ mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
 vendor.mm.enable.qcom_parser=16777215
 
-#Property to set native recorder's maximum base layer fps
+# Property to set native recorder's maximum base layer fps
 ro.media.recorder-max-base-layer-fps = 60
 
 # Serial Console

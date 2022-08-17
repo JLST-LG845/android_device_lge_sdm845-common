@@ -33,12 +33,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
-include build/make/target/product/iorap_large_memory_config.mk
-
-# Iorap
-PRODUCT_PACKAGES += \
-    iorap-app-startup-runner
-
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
