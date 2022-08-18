@@ -855,10 +855,10 @@ function configure_read_ahead_kb_values() {
             echo 128 > $dm
         done
     else
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+        echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
+        echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
         for dm in $dmpts; do
-            echo 512 > $dm
+            echo 128 > $dm
         done
     fi
 }
