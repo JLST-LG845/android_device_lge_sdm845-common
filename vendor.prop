@@ -38,7 +38,8 @@ vendor.audio.safx.pbe.enabled=false
 vendor.audio.tunnel.encode=false
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
-vendor.voice.path.for.pcm.voip=false
+vendor.voice.path.for.pcm.voip=true
+use.dedicated.device.for.voip=true
 
 # Audio - DAC
 persist.vendor.lge.audio.handset_rx_type=DEFAULT
@@ -62,7 +63,7 @@ vendor.audio.feature.battery_listener.enable=false
 vendor.audio.feature.compr_cap.enable=false
 vendor.audio.feature.compress_in.enable=true
 vendor.audio.feature.compress_meta_data.enable=true
-vendor.audio.feature.compr_voip.enable=true
+vendor.audio.feature.compr_voip.enable=false
 vendor.audio.feature.concurrent_capture.enable=true
 vendor.audio.feature.custom_stereo.enable=true
 vendor.audio.feature.deepbuffer_as_primary.enable=false
