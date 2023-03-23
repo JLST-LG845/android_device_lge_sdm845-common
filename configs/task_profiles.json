@@ -16,12 +16,6 @@
       "File": "top-app/cpus"
     },
     {
-      "Name": "AudioAppCapacityCPUs",
-      "Controller": "cpuset",
-      "File": "audio-app/cpus"
-    },
-
-    {
       "Name": "MemLimit",
       "Controller": "memory",
       "File": "memory.limit_in_bytes"
@@ -76,11 +70,11 @@
       "Name": "Frozen",
       "Actions": [
         {
-          "Name": "SetAttribute",
+          "Name": "JoinCgroup",
           "Params":
           {
-            "Name": "FreezerState",
-            "Value": "1"
+            "Controller": "freezer",
+            "Path": ""
           }
         }
       ]
@@ -89,11 +83,11 @@
       "Name": "Unfrozen",
       "Actions": [
         {
-          "Name": "SetAttribute",
+          "Name": "JoinCgroup",
           "Params":
           {
-            "Name": "FreezerState",
-            "Value": "0"
+            "Controller": "freezer",
+            "Path": "../"
           }
         }
       ]
@@ -105,21 +99,8 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "cpu",
-            "Path": "system"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "ServicePerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "system-background"
+            "Controller": "cpuset",
+            "Path": ""
           }
         }
       ]
@@ -176,20 +157,6 @@
         }
       ]
     },
-    {
-      "Name": "AudioAppPerformance",
-      "Actions" : [
-        {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
-            "Controller": "cpuset",
-            "Path": "audio-app"
-          }
-        }
-      ]
-    },
-
     {
       "Name": "CpuPolicySpread",
       "Actions": [
@@ -402,46 +369,6 @@
         }
       ]
     },
-    {
-      "Name": "AudioAppCapacity",
-      "Actions" : [
-        {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
-            "Controller": "cpuset",
-            "Path": "audio-app"
-          }
-        }
-      ]
-    },
-
-    {
-      "Name": "BlkIOForeground",
-      "Actions" : [
-        {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
-            "Controller": "blkio",
-            "Path": ""
-          }
-        }
-      ]
-    },
-    {
-      "Name": "BlkIOBackground",
-      "Actions" : [
-        {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
-            "Controller": "blkio",
-            "Path": "bg"
-          }
-        }
-      ]
-    },
 
     {
       "Name": "LowIoPriority",
@@ -516,33 +443,6 @@
           "Params":
           {
             "Slack": "50000"
-          }
-        }
-      ]
-    },
-
-    {
-      "Name": "SFMainPolicy",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpuset",
-            "Path": "system-background"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "SFRenderEnginePolicy",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpuset",
-            "Path": "system-background"
           }
         }
       ]
@@ -631,6 +531,32 @@
         }
       ]
     },
+    {
+      "Name": "FreezerDisabled",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "FreezerState",
+            "Value": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "FreezerEnabled",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "FreezerState",
+            "Value": "1"
+          }
+        }
+      ]
+    }
   ],
 
   "AggregateProfiles": [
@@ -649,10 +575,6 @@
     {
       "Name": "SCHED_SP_TOP_APP",
       "Profiles": [ "MaxPerformance", "MaxIoPriority", "TimerSlackNormal" ]
-    },
-    {
-      "Name": "SCHED_SP_SYSTEM",
-      "Profiles": [ "ServicePerformance", "LowIoPriority", "TimerSlackNormal" ]
     },
     {
       "Name": "SCHED_SP_RT_APP",
