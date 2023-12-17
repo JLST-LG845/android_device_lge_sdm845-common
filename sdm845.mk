@@ -271,8 +271,16 @@ PRODUCT_PACKAGES += \
     check_f2fs
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.lge_sdm845
+# Use different fingerprint HALs for judyp
+ifeq ($(TARGET_VENDOR_DEVICE_NAME),judyp)
+    PRODUCT_PACKAGES += \
+        android.hardware.biometrics.fingerprint@2.1 \
+        android.hardware.biometrics.fingerprint@2.1.vendor
+# Use default LG fingerprint drivers for the rest (judyln/judypn)
+else
+    PRODUCT_PACKAGES += \
+        android.hardware.biometrics.fingerprint@2.1-service.lge_sdm845
+endif
 
 # FM packages
 #PRODUCT_PACKAGES += \
