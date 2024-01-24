@@ -268,7 +268,7 @@ ifeq ($(TARGET_VENDOR_DEVICE_NAME),judyp)
     PRODUCT_PACKAGES += \
         android.hardware.biometrics.fingerprint@2.1 \
         android.hardware.biometrics.fingerprint@2.1.vendor
-# Use default LG fingerprint drivers for the rest (judyln/judypn)
+# Use default LG fingerprint HAL for the rest (judyln/judypn)
 else
     PRODUCT_PACKAGES += \
         android.hardware.biometrics.fingerprint@2.1-service.lge_sdm845
@@ -317,9 +317,11 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.base@1.0_system \
+    android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system \
+    android.hidl.manager@1.0.vendor \
+    android.hidl.allocator@1.0 \
+    android.hidl.allocator@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
