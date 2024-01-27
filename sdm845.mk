@@ -564,6 +564,10 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
     android.hardware.usb.gadget@1.0
 
+# Vendor libstdc++
+PRODUCT_PACKAGES += \
+    libstdc++_vendor
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.3-service.lge
