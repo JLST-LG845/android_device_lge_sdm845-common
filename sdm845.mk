@@ -45,10 +45,6 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-# Atrace
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service.pixel
-
 # Apex
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
