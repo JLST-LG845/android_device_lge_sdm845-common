@@ -254,7 +254,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.14 \
     vendor.display.config@1.14.vendor \
     vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor \
+    vendor.display.config@2.0.vendor
 
 # Configstore
 PRODUCT_PACKAGES += \
