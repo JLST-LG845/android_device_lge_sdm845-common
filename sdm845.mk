@@ -15,7 +15,7 @@
 #
 
 # Inherit proprietary blobs
-$(call inherit-product-if-exists, vendor/lge/sdm845-common/sdm845-common-vendor.mk)
+$(call inherit-product, vendor/lge/sdm845-common/sdm845-common-vendor.mk)
 
 COMMON_PATH := device/lge/sdm845-common
 
@@ -538,7 +538,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/lge/
+    hardware/lge
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -555,7 +555,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.lge_sdm845
 
-# LiveDisplay
+# Live Display
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.lge_sdm845
 
