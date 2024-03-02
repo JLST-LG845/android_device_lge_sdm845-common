@@ -38,6 +38,7 @@
         </receiver>
 
         <service android:name=".DozeService"
+		 android:exported="true"
                  android:permission="LGEService">
         </service>
 
