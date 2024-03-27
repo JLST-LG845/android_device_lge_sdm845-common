@@ -164,8 +164,7 @@
             "Path": "/dev/cpuset/top-app/uclamp.min",
             "Values": [
                 "0",
-                "30",
-                "max"
+                "20"
             ],
             "DefaultIndex": 1,
             "ResetOnInit": true
@@ -353,7 +352,7 @@
             "PowerHint": "INTERACTION",
             "Node": "TA_uClampBoost",
             "Duration": 0,
-            "Value": "30"
+            "Value": "20"
         },
         {
             "PowerHint": "INTERACTION",
