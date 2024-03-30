@@ -45,10 +45,6 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-# Atrace
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service.pixel
-
 # Apex
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
@@ -97,10 +93,6 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl \
     update_engine_client
 
-# Tracing
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service.pixel
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
@@ -123,9 +115,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libvolumelistener \
     tinymix \
-    libtinycompress \
-    libtinycompress.vendor
-
+    libtinycompress
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
@@ -165,7 +155,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     audio.bluetooth.default \
     liba2dpoffload \
-    libbthost_if \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
@@ -184,7 +173,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    Snap \
     vendor.qti.hardware.camera.device@1.0.vendor
 
 # Component overrides
@@ -239,7 +227,6 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.2-impl \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
@@ -248,7 +235,6 @@ PRODUCT_PACKAGES += \
     gralloc.sdm845 \
     hwcomposer.sdm845 \
     libtinyxml \
-    libtinyxml.vendor \
     libvulkan \
     memtrack.sdm845 \
     libqdutils \
@@ -273,16 +259,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.lge_sdm845
-
-# FM packages
-#PRODUCT_PACKAGES += \
-#	libqcomfm_jni \
-#	android.hardware.broadcastradio@1.0-impl \
-#	FM2 \
-#	qcom.fmradio \
-#	qcom.fmradio.xml
-
-#PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
