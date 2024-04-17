@@ -61,7 +61,6 @@ BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
-USE_CAMERA_STUB := true
 
 # Display
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
