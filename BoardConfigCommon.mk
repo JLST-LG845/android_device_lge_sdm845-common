@@ -72,9 +72,6 @@ TARGET_USES_COLOR_METADATA := true
 TARGET_USE_COLOR_MANAGEMENT := true
 TARGET_USES_DRM_PP := true
 
-# DRM
-TARGET_ENABLE_MEDIADRM_64 := true
-
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
