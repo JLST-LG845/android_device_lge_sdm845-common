@@ -474,6 +474,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.4 \
     android.hardware.radio@1.4.vendor \
     android.hardware.radio.config@1.2 \
+    android.hardware.radio@1.4-service.lge \
     libprotobuf-cpp-full \
     librmnetctl \
     libxml2
