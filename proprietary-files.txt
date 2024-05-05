@@ -578,15 +578,6 @@ vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NFC
-vendor/bin/hw/android.hardware.nfc@1.2-service-pn55x
-vendor/etc/init/android.hardware.nfc@1.2-service-pn55x.rc
-vendor/lib64/libLGnfc_config_vendor.so
-vendor/lib64/nfc_lg.pn55x.so
-vendor/lib64/vendor.nxp.nxpnfc@2.0.so
-vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so
-vendor/lib/libLGnfc_config_vendor.so
-
 # OMX
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
@@ -594,27 +585,20 @@ vendor/lib/libdsd2pcm.so
 vendor/lib/libFlacSwDec.so
 vendor/lib/libMpeg4SwEncoder.so
 vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAacEnc.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
 vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrEnc.so
 vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libOmxApeDec.so
 vendor/lib/libOmxApeDecSw.so
 vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxEvrcEnc.so
 vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxG711Enc.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxQcelp13Enc.so
 vendor/lib/libOmxSwVdec.so
 vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxVpp.so
-vendor/lib/libOmxVdec.so
-vendor/lib/libOmxVenc.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libmulawdec.so
@@ -625,25 +609,18 @@ vendor/lib64/libApeSwDec.so
 vendor/lib64/libFlacSwDec.so
 vendor/lib64/libMpeg4SwEncoder.so
 vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAacEnc.so
 vendor/lib64/libOmxAlacDec.so
 vendor/lib64/libOmxAlacDecSw.so
 vendor/lib64/libOmxAmrDec.so
-vendor/lib64/libOmxAmrEnc.so
 vendor/lib64/libOmxAmrwbplusDec.so
 vendor/lib64/libOmxApeDec.so
 vendor/lib64/libOmxApeDecSw.so
 vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxEvrcEnc.so
 vendor/lib64/libOmxG711Dec.so
-vendor/lib64/libOmxG711Enc.so
 vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxQcelp13Enc.so
 vendor/lib64/libOmxSwVdec.so
 vendor/lib64/libOmxSwVencMpeg4.so
 vendor/lib64/libOmxVpp.so
-vendor/lib64/libOmxVdec.so
-vendor/lib64/libOmxVenc.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmulawdec.so
 vendor/lib64/libswvdec.so
@@ -839,9 +816,6 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
-
-# Telephony (qti-telephony-common) - from repo8 - cmi-qssi-user-11-RKQ1.200710.002-V12.1.2.0.RJACNXM-release-keys
-#product/framework/qti-telephony-common.jar:system_ext/framework/qti-telephony-common.jar|78f600ef38a46e592684ba30c615b1aea7dcc9a4
 
 # RIL - IMS
 system_ext/lib64/lib-imsvideocodec.so
