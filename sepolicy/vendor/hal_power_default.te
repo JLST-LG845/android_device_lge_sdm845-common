@@ -1,4 +1,4 @@
-r_dir_file(hal_power_default, sysfs_graphics)
+r_dir_file(hal_power_default, sysfs_graphics);
 
 allow hal_power_default {
     input_device

@@ -1,7 +1,7 @@
 type zramswap, domain;
 type zramswap_exec, exec_type, vendor_file_type, file_type;
 
-init_daemon_domain(zramswap)
+init_daemon_domain(zramswap);
 
 # /dev/block/zram0
 allow zramswap block_device:dir r_dir_perms;

@@ -3,11 +3,11 @@ allow hal_camera_default mnt_vendor_file:dir ra_dir_perms;
 allow hal_camera_default mnt_vendor_file:file rw_file_perms;
 allow hal_camera_default mnt_vendor_file:file create;
 
-set_prop(hal_camera_default, vendor_camera_prop)
+set_prop(hal_camera_default, vendor_camera_prop);
 allow hal_camera_default sysfs:file rw_file_perms;
 
 #============= hal_graphics_composer_default ==============
-get_prop(hal_graphics_composer_default, vendor_dpps_prop)
+get_prop(hal_graphics_composer_default, vendor_dpps_prop);
 
 #============= hal_health_default ==============
 allow hal_health_default sysfs:file r_file_perms;
@@ -56,10 +56,10 @@ allow ueventd vfat:file r_file_perms;
 
 #============= vendor_init ==============
 allow vendor_init device:file create_file_perms;
-get_prop(vendor_init, persist_debug_prop)
-set_prop(vendor_init, camera_prop)
-set_prop(vendor_init, freq_prop)
-set_prop(vendor_init, vendor_ssr_prop)
+get_prop(vendor_init, persist_debug_prop);
+set_prop(vendor_init, camera_prop);
+set_prop(vendor_init, freq_prop);
+set_prop(vendor_init, vendor_ssr_prop);
 
 allow vendor_init proc_cmdline:file r_file_perms;
 allow vendor_init gsi_metadata_file:dir r_dir_perms;
@@ -117,12 +117,12 @@ allow vold mnt_vendor_file:dir r_dir_perms;
 allow vold mnt_product_file:dir r_dir_perms;
 
 #============= hal_power_stats_default ==============
-add_service(hal_power_stats_default, hal_power_stats_vendor_service)
-vndbinder_use(hal_power_stats)
-binder_call(hal_power_stats_default, vndservicemanager)
+add_service(hal_power_stats_default, hal_power_stats_vendor_service);
+vndbinder_use(hal_power_stats);
+binder_call(hal_power_stats_default, vndservicemanager);
 allow hal_power_stats_default sysfs_rpm:file r_file_perms;
 allow hal_power_stats_default sysfs_system_sleep_stats:file r_file_perms;
-get_prop(hal_power_stats_default, wifi_hal_prop)
+get_prop(hal_power_stats_default, wifi_hal_prop);
 
 #============= hal_lineage_touch_default ==============
 allow hal_lineage_touch_default sysfs:file rw_file_perms;
