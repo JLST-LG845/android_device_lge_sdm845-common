@@ -1,0 +1,10 @@
+allow wcnss_service persist_lg_data_file:dir search;
+
+allow wcnss_service persist_lg_wlan_file:dir r_dir_perms;
+allow wcnss_service persist_lg_wlan_file:lnk_file r_file_perms;
+
+allow wcnss_service rootfs:dir r_dir_perms;
+
+allow wcnss_service vendor_shell_exec:file execute_no_trans;
+
+allow wcnss_service kmsg_device:chr_file w_file_perms;
