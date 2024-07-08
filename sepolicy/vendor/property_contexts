@@ -37,6 +37,9 @@ ro.camera.res.fmq.size                   u:object_r:camera_ro_prop:s0
 ro.camera.req.fmq.size                   u:object_r:camera_ro_prop:s0
 ro.vendor.camera.                        u:object_r:camera_ro_prop:s0
 
+# Netmgrd
+persist.data_netmgrd_mtu                                        u:object_r:netmgrd_prop:s0
+
 # Sensors
 persist.sensor.sardisable  u:object_r:sensors_prop:s0
 

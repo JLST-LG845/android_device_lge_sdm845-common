@@ -1,0 +1,4 @@
+get_prop(netmgrd, {
+    netmgrd_prop
+    radio_control_prop
+});
