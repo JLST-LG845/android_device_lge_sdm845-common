@@ -35,6 +35,7 @@ genfscon sysfs /devices/platform/soc/171c0000.slim/tavil-slim-pgd/tavil_codec/ex
 genfscon sysfs /devices/platform/soc/171c0000.slim/tavil-slim-pgd/tavil_codec/extcon/extcon4/state u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/171c0000.slim/tavil-slim-pgd/tavil_codec/extcon/extcon4/cable.0/ u:object_r:sysfs_graphics:s0
 
+genfscon sysfs /devices/virtual/input/lge_touch u:object_r:sysfs_lge_touch:s0
 genfscon sysfs /devices/virtual/lg_rgb_led/use_patterns/ u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/virtual/panel/img_tune/ u:object_r:sysfs_livedisplay_tuneable:s0
 genfscon sysfs /devices/virtual/panel/brightness/hl_mode u:object_r:sysfs_livedisplay_tuneable:s0
