@@ -5,6 +5,7 @@ allow hal_power_default {
     sysfs_graphics
     sysfs_input
     sysfs_devfreq
+    sysfs_lge_touch
     sysfs_msm_subsys
     cgroup
 }:dir r_dir_perms;
@@ -19,6 +20,7 @@ allow hal_power_default {
     sysfs_devices_system_cpu
     sysfs_input
     sysfs_kgsl
+    sysfs_lge_touch
     sysfs_msm_subsys
     cgroup
     proc_sysctl_schedboost
