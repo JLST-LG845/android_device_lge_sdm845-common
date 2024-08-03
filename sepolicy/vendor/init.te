@@ -10,3 +10,5 @@ allow init { persdata_block_device
 allow init firmware_file:filesystem getattr;
 
 allow init encrypt_block_device:blk_file write;
+
+allow init same_process_hal_file:file execute;
