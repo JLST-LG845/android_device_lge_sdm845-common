@@ -1,1 +1,3 @@
 set_prop(hal_wifi_default, vendor_wifi_version)
+
+allow hal_wifi_default proc_net:file w_file_perms;
