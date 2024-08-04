@@ -18,9 +18,13 @@ set_prop(vendor_init, vendor_lge_usb_prop)
 set_prop(vendor_init, vendor_qni_prop)
 set_prop(vendor_init, vendor_sensors_prop)
 set_prop(vendor_init, vendor_ssr_prop)
+set_prop(vendor_init, freq_prop)
 set_prop(vendor_init, qcom_ims_prop)
 set_prop(vendor_init, media_settings_prop)
 
 allow vendor_init persdata_block_device:dir relabelto;
 
 allow vendor_init sec_block_device:blk_file r_file_perms;
+
+allow vendor_init device:file create_file_perms;
+allow vendor_init tombstone_data_file:dir r_dir_perms;
